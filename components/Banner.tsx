@@ -13,7 +13,7 @@ const Banner = () => {
           a new season begins
         </p>
         <div className="flex flex-col justify-center items-center gap-2 pt-1 md:pt-3">
-          <h1 className="text-white/80 text-base md:text-5xl font-medium  font-(family-name:--font-playfair) ">My Next Chapter</h1>
+          <h1 className="text-white/80 text-base md:text-7xl font-bold leading-[1.1] tracking-tight font-(family-name:--font-playfair) ">My Next Chapter</h1>
           <p className="max-w-220 text-white/90 text-center text-sm md:text-xl">
             After my release from Daystar Christian Centre, I'm stepping into
             two connected assignments —{" "}
