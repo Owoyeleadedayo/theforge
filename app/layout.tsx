@@ -1,12 +1,20 @@
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Playfair_Display, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const sora = Sora({
-  variable: "--font-sora",
+const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-source-sans",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.className} antialiased`}
+        className={`${playfair.variable} ${sourceSans.className} antialiased`}
       >
         <Toaster richColors position="top-right" />
         {children}
