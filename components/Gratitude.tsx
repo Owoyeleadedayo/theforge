@@ -10,7 +10,7 @@ const Gratitude = () => {
           </p>
           <p className="text-gray-700/70 max-w-230 text-center font-normal text-base md:text-lg">
             For over two decades, I've had the privilege of serving, learning,
-            and building within Daystar Christian Centre. I carry deep gratitude
+            and building under the oversight of <span className="font-bold">Pastors Sam & Nike Adeyemi at Daystar Christian Centre.</span> I carry deep gratitude
             for the people, the relationships, and the work we have shared.
           </p>
         </div>
