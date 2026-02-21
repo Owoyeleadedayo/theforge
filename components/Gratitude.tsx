@@ -1,3 +1,4 @@
+import { Play } from "lucide-react";
 import React from "react";
 
 const Gratitude = () => {
@@ -32,7 +33,7 @@ const Gratitude = () => {
         <p className="text-black text-2xl md:text-4xl font-medium ">Hear the Vision</p>
         <p className="text-gray-700/70 font-normal text-center text-base md:text-lg">A short word on what's ahead and why it matters.</p>
         <div className="flex flex-col w-full md:w-180 h-70 md:h-100 bg-[#EDEBE8] justify-center items-center rounded-xl mt-2 border border-black/10 gap-2">
-            play
+            <Play className="w-8 h-8 text-[#CC7133] group-hover:scale-110 transition-transform cursor-pointer" />
             <p className="text-base text-black/80 font-medium capitalize">Time to build</p>
             <p className="text-sm text-gray-700/50 ">video coming soon</p>
         </div>

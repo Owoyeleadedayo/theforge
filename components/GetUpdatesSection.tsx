@@ -45,13 +45,13 @@ const GetUpdatesSection = () => {
   });
 
   const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+  
     const toastId = toast.loading("Submitting...", {
       description: "Please wait while we process your request.",
     });
-
+  
     try {
-      console.log("Form submitted:", data);
-
       const response = await fetch("/api/subscribe", {
         method: "POST",
         headers: {
@@ -59,33 +59,28 @@ const GetUpdatesSection = () => {
         },
         body: JSON.stringify(data),
       });
-
+  
       const result = await response.json();
-      console.log("Response:", result);
-
+  
       if (!response.ok) {
         throw new Error(result.error || "Failed to submit");
       }
-
-      // Dismiss loading toast and show success
+  
       toast.dismiss(toastId);
       toast.success("You're in! 🎉", {
         description:
           "Thanks for joining me on this next chapter. You'll hear from me soon.",
-        duration: 5000,
       });
-
+  
       form.reset();
     } catch (error) {
-      console.error("Error:", error);
-
-      // Dismiss loading toast and show error
       toast.dismiss(toastId);
       toast.error("Something went wrong", {
         description:
           error instanceof Error ? error.message : "Please try again later.",
-        duration: 5000,
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
