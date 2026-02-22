@@ -17,7 +17,7 @@ const PathSection = () => {
                 Formation & Community
               </p>
               <h3 className="text-2xl font-semibold text-foreground">
-                ONEFORGE is for you if…
+              THE CHURCH is for you if…
               </h3>
               <p className="text-black/70 leading-relaxed">
                 You desire spiritual depth, supportive church community, and a practical path 

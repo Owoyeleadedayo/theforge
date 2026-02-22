@@ -31,10 +31,10 @@ const OneforgeSection = () => {
           <p className="text-sm text-[#CC7133] uppercase tracking-[0.25em] text-accent font-semibold">
             Spiritual Formation & Church Community
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-black">ONEFORGE</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-black">THE CHURCH</h2>
           <p className="text-lg text-gray-700/80 max-w-3xl mx-auto">
             A mold for spiritual growth, engaging church community, and compassionate support. 
-            ONEFORGE is being formed to help people flourish spiritually, personally, and 
+            This is being formed to help people flourish spiritually, personally, and 
             purposefully while they grow alongside others of like mind.
           </p>
         </div>
@@ -56,7 +56,7 @@ const OneforgeSection = () => {
 
         <div className="bg-[#F6F3EE] border border-black/20 rounded-2xl p-8 md:p-12 text-center space-y-6">
           <h3 className="text-2xl font-semibold text-foreground">
-            ONEFORGE in One Sentence
+            THE CHURCH in One Sentence
           </h3>
           <p className="text-lg italic text-muted-foreground max-w-2xl mx-auto">
             "We are molding influencers for the Kingdom through formation, church community, 

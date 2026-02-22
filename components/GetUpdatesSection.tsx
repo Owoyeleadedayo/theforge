@@ -95,7 +95,7 @@ const GetUpdatesSection = () => {
             Get Updates
           </h2>
           <p className="text-muted-foreground">
-            Receive periodic updates on ONEFORGE, the School of Strategy,
+            Receive periodic updates on the church, the School of Strategy,
             upcoming launches, and ways to participate.
           </p>
         </div>

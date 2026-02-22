@@ -112,10 +112,10 @@ const VolunteerForm = () => {
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-10 space-y-3">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-            Volunteer to Help Build ONEFORGE
+            Volunteer to Help Build the church
           </h2>
           <p className="text-muted-foreground">
-            ONEFORGE will be built with a volunteer core: high-heart, high-integrity people 
+            The church will be built with a volunteer core: high-heart, high-integrity people 
             who want to serve meaningfully and build excellently. If you'd like to be 
             considered, apply here.
           </p>

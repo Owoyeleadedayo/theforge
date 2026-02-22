@@ -17,11 +17,11 @@ const Banner = () => {
           <p className="max-w-220 text-white/90 text-center text-sm md:text-xl">
             After my release from Daystar Christian Centre, I'm stepping into
             two connected assignments —{" "}
-            <span className="text-white font-semibold">ONEFORGE</span> and{" "}
+            <span className="text-white font-semibold">Church community</span> and{" "}
             <span className="text-white font-semibold">
               HUPO School of Strategy
             </span>
-            : a home for spiritual formation, church community, and courageous
+            : a home for spiritual formation, engaging community, and courageous
             builders… and a practical learning engine for leaders who must
             deliver results.
           </p>
@@ -31,9 +31,9 @@ const Banner = () => {
           </p>
         </div>
 
-        <div className="flex gap-2 md:gap-4 pt-2 md:pt-5">
+        <div className="flex gap-2 md:gap-4 pt-2 md:pt-5 items-stretch">
             <Button className='text-white/90 text-sm md:text-base border border-white rounded-2xl bg-white/20 cursor-pointer hover:bg-white/35 hover:scale-105 ease-in-out transition-all duration-300' onClick={() => scrollTo("updates-form")}>Get Updates</Button>
-            <Button className='text-white/90 text-sm md:text-base border border-white rounded-2xl bg-white/20 cursor-pointer hover:bg-white/35 hover:scale-105 ease-in-out transition-all duration-300' onClick={() => scrollTo("volunteer-form")}>Volunteer with ONEFORGE</Button>
+            <Button className='text-white/90 text-sm md:text-base border border-white rounded-2xl bg-white/20 cursor-pointer hover:bg-white/35 hover:scale-105 ease-in-out transition-all duration-300' onClick={() => scrollTo("volunteer-form")}>Volunteer</Button>
         </div>
       </div>
     </div>
