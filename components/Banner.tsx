@@ -17,7 +17,7 @@ const Banner = () => {
           <p className="max-w-220 text-white/90 text-center text-sm md:text-xl">
             After my release from Daystar Christian Centre, I'm stepping into
             two connected assignments —{" "}
-            <span className="text-white font-semibold">Church community</span> and{" "}
+            <span className="text-white font-semibold">church community</span> and{" "}
             <span className="text-white font-semibold">
               HUPO School of Strategy
             </span>
