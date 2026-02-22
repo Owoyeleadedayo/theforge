@@ -84,7 +84,7 @@ const VolunteerForm = () => {
       
       // Success toast
       toast.success("Application Received ✅", {
-        description: "Thank you for volunteering! We'll review your application and reach out to shortlisted candidates soon.",
+        description: "Thank you for volunteering! We're excited for what's ahead. We'll reach out to you soon.",
         duration: 5000,
       });
   
