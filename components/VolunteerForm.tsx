@@ -260,7 +260,7 @@ const VolunteerForm = () => {
               name="reason"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Why do you want to volunteer with ONEFORGE?</FormLabel>
+                  <FormLabel>Why do you want to volunteer with the church?</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Share what draws you to this mission..."
