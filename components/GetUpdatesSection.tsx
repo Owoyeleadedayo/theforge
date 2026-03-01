@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import { useState } from "react";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTrigger } from "./ui/dialog";
 
 // More explicit schema
 const schema = z.object({
@@ -46,11 +47,11 @@ const GetUpdatesSection = () => {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-  
+
     const toastId = toast.loading("Submitting...", {
       description: "Please wait while we process your request.",
     });
-  
+
     try {
       const response = await fetch("/api/subscribe", {
         method: "POST",
@@ -59,19 +60,24 @@ const GetUpdatesSection = () => {
         },
         body: JSON.stringify(data),
       });
-  
+
       const result = await response.json();
-  
+
       if (!response.ok) {
         throw new Error(result.error || "Failed to submit");
       }
-  
+
       toast.dismiss(toastId);
       toast.success("You're in! 🎉", {
         description:
           "Thanks for joining me on this next chapter. You'll hear from me soon.",
       });
-  
+
+      // Show Dialog
+      setTimeout(() => {
+        setDialogOpen(true);
+      }, 5000)
+
       form.reset();
     } catch (error) {
       toast.dismiss(toastId);
@@ -84,8 +90,9 @@ const GetUpdatesSection = () => {
     }
   };
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
     <section id="updates-form" className="px-6 py-24 bg-[#F6F2EE]">
@@ -221,14 +228,28 @@ const GetUpdatesSection = () => {
               )}
             />
 
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full rounded-full bg-[#1D212B] text-white hover:bg-[#1D212B]/90 py-6"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Submitting..." : "Sign Up for Updates"}
-            </Button>
+            <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+              <DialogTrigger>
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full rounded-full bg-[#1D212B] text-white hover:bg-[#1D212B]/90 py-6"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Submitting..." : "Sign Up for Updates"}
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="bg-black">
+                <DialogDescription className="text-white text-2xl text-center">
+                  Thank you for Subscribing
+                </DialogDescription>
+                <DialogFooter className="sm:justify-start">
+                  <DialogClose asChild>
+                    <Button type="button" className="text-white border border-white/70 text-md rounded-2xl cursor-pointer">Close</Button>
+                  </DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </form>
         </Form>
       </div>
