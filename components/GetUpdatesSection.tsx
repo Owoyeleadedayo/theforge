@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import { useState } from "react";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter } from "./ui/dialog";
 
 // More explicit schema
 const schema = z.object({
@@ -229,7 +229,6 @@ const GetUpdatesSection = () => {
             />
 
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-              <DialogTrigger>
                 <Button
                   type="submit"
                   size="lg"
@@ -238,7 +237,6 @@ const GetUpdatesSection = () => {
                 >
                   {isSubmitting ? "Submitting..." : "Sign Up for Updates"}
                 </Button>
-              </DialogTrigger>
               <DialogContent className="bg-black">
                 <DialogDescription className="text-white text-2xl text-center">
                   Thank you for Subscribing

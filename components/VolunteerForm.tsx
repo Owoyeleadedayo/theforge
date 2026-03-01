@@ -22,7 +22,6 @@ import {
   DialogContent,
   DialogDescription,
   DialogFooter,
-  DialogTrigger,
 } from "./ui/dialog";
 
 const servingAreas = [
@@ -108,8 +107,7 @@ const VolunteerForm = () => {
       // Show Dialog
       setTimeout(() => {
         setDialogOpen(true);
-      }, 5000)
-      
+      }, 5000);
 
       // Reset form
       form.reset();
@@ -307,30 +305,33 @@ const VolunteerForm = () => {
             />
 
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-              <DialogTrigger>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full rounded-full bg-[#1D212B] text-white hover:bg-[#1D212B]/90 py-6"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    "Apply to Volunteer"
-                  )}
-                </Button>
-              </DialogTrigger>
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full rounded-full bg-[#1D212B] text-white hover:bg-[#1D212B]/90 py-6"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  "Apply to Volunteer"
+                )}
+              </Button>
               <DialogContent className="bg-black">
                 <DialogDescription className="text-white text-2xl text-center">
                   Thank you for Volunteering, We are going to get back to you
                 </DialogDescription>
                 <DialogFooter className="sm:justify-start">
                   <DialogClose asChild>
-                    <Button type="button" className="text-white border border-white/70 text-md rounded-2xl cursor-pointer">Close</Button>
+                    <Button
+                      type="button"
+                      className="text-white border border-white/70 text-md rounded-2xl cursor-pointer"
+                    >
+                      Close
+                    </Button>
                   </DialogClose>
                 </DialogFooter>
               </DialogContent>
